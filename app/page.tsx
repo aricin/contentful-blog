@@ -26,23 +26,25 @@ function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-8 md:mb-12">
-        <CoverImage title={title} slug={slug} url={coverImage.url} />
-      </div>
-      <div className="">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link href={`/posts/${slug}`} className="hover:underline">
-              {title}
-            </Link>
-          </h3>
-          <div className="mb-4 text-lg">
-            <Date dateString={date} />
-          </div>
+      <div className="flex flex-col xl:flex-row xl:space-x-8 mb-8 xl:mb-28">
+        <div className="xl:w-2/3 mb-6 xl:mb-0">
+          <CoverImage title={title} slug={slug} url={coverImage.url} />
         </div>
-        <div className="mb-20">
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          {author && <Avatar name={author.name} picture={author.picture} />}
+        <div className="xl:w-1/3 flex flex-col justify-end">
+          <div>
+            <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
+              <Link href={`/posts/${slug}`} className="hover:underline">
+                {title}
+              </Link>
+            </h3>
+            <div className="text-lg">
+              <Date dateString={date} />
+            </div>
+          </div>
+          <div className="mt-4 mb-12 xl:mb-0">
+            <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+            {author && <Avatar name={author.name} picture={author.picture} />}
+          </div>
         </div>
       </div>
     </section>
