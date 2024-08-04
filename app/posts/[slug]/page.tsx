@@ -1,10 +1,10 @@
 import { draftMode } from "next/headers";
 
-import MoreStories from "../../more-stories";
-import Avatar from "../../avatar";
-import Date from "../../date";
-import CoverImage from "../../cover-image";
-import Logo from "../../logo"
+import MoreStories from "@/components/more-stories";
+import Avatar from "@/components/avatar";
+import Date from "@/components/date";
+import CoverImage from "@/components/cover-image";
+import Logo from "@/components/logo"
 
 import { Markdown } from "@/lib/markdown";
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
